@@ -33,10 +33,8 @@ public class Base {
 
         if (browserName.equals("chrome")) {
             System.setProperty("webdriver.chrome.driver",
-                    System.getProperty("user.dir") + "/src/main/resources/chromedriver");
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments("--remote-allow-origins=*");
-            driver = new ChromeDriver(options);
+                    System.getProperty("user.dir") + "/src/main/resources/chromedriver.exe");
+            driver = new ChromeDriver();
         } else if (browserName.equals("firefox")) {
             System.setProperty("webdriver.gecko.driver",
                     System.getProperty("user.dir") + "/src/main/resources/resources/geckodriver");
